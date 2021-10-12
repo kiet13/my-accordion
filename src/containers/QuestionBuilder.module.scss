@@ -1,0 +1,31 @@
+@import "../scss/variables";
+@import "../scss/mixins";
+
+.QuestionBuilder {
+  margin: auto;
+  background-color: $color-white;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.3);
+  width: 80rem;
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+  }
+}
+
+.QuestionHeading {
+  width: 20rem;
+  padding-right: 5rem;
+  text-transform: capitalize;
+
+  @include respond(tab-port) {
+    width: auto;
+    padding-right: 0;
+    padding-bottom: 3rem;
+  }
+}

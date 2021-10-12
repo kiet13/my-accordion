@@ -1,0 +1,68 @@
+@import "../../scss/variables";
+
+.Question {
+  // display: flex;
+  // justify-content: space-between;
+  border: 2px solid $color-grey-2;
+  border-radius: 3px;
+  box-shadow: 0 0 12px 1px adjust-color($color-grey-1, $alpha: 0.4);
+  padding: 2rem;
+  width: 100%;
+
+  .QuestionHeading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  button {
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    color: $color-pink;
+    background-color: $color-grey-1;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 2rem;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  .Collapse,
+  .Active {
+    position: relative;
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .Collapse:after,
+  .Active:after {
+    content: "";
+    display: block;
+    height: 0.2rem;
+    width: 1.2rem;
+    background-color: $color-pink;
+  }
+
+  .Collapse:before {
+    content: "";
+    display: block;
+    height: 1.2rem;
+    width: 0.2rem;
+    background-color: $color-pink;
+  }
+
+  .Info {
+    margin-top: 1rem;
+  }
+}
